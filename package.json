@@ -2,11 +2,11 @@
   "name": "node-spaceX",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "functions/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/bin/server",
-    "build": "rimraf ./build && tsc",
+    "build": "rimraf ./build && netlify-lambda build src",
     "start:prod": "npm run build && node build/index.js",
     "lint": "eslint . --ext .ts --fix"
   },
@@ -34,6 +34,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "request": "^2.88.2"
+    "netlify-lambda": "^2.0.3",
+    "request": "^2.88.2",
+    "serverless-http": "^2.7.0"
   }
 }

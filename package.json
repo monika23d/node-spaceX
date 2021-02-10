@@ -5,7 +5,7 @@
   "main": "functions/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/bin/server",
+    "start": "node ./src/bin/server",
     "build": "netlify-lambda build src",
     "start:prod": "npm run build && node build/index.js",
     "lint": "eslint . --ext .ts --fix"
